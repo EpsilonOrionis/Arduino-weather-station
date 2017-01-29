@@ -1,5 +1,5 @@
 // Including the dht library used by the humidity/temperature sensor
-#include <dht.h>
+#include <dht.h> 
 
 // Including the LiquidCrystal library used by the LCD display
 #include <LiquidCrystal.h>
