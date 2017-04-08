@@ -1,5 +1,5 @@
-// Including the dht library used by the humidity/temperature sensor
-#include <dht.h> 
+// Including the dht library used by the humidity/temperature sensor 
+#include <dht.h>
 
 // Including the LiquidCrystal library used by the LCD display
 #include <LiquidCrystal.h>
@@ -14,25 +14,25 @@ dht DHT;
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 void setup() {
-  
+
   // Initialize the serial virtual output display
   Serial.begin(9600);
-  
+
   // Inizialize the lcd instance
   lcd.begin(16, 2);
-  
+
   // Let system settle
   delay(300);
 
   // Print in Serial display
   Serial.println("Humidity and temperature\n\n");
-  
+
   // Wait rest of 1000ms recommended delay before accessing the sensor
   delay(700);
 }
 
 void loop() {
-  
+
   //This is the "heart" of the sketch
   DHT.read11(dht_dpin);
 
